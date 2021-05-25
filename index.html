@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web</title>
+</head>
+<body>
+    <div style="background-color: black; width: 80vw; margin: auto; padding-left:20px ;">
+    <code style="color: whitesmoke; font-size: 15px; ">
+        <p>  &lt!DOCTYPE html&gt</p>
+      
+
+&lthtml lang="en"&gt
+<br>
+&lthead&gt
+<br>
+    &ltmeta charset="UTF-8"&gt
+    <br>
+    &ltmeta http-equiv="X-UA-Compatible" content="IE=edge"&gt
+    <br>
+    &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+    <br>
+    &lttitle&gtForm Validation&lt/title&gt
+    <br>
+    <div style="color: aqua;">
+    &ltscript type="text/javascript"&gt
+      <br>
+      <h2>//validating function</h2>
+      function validate() {
+          <br>
+          <h2>//function to validate email</h2>
+        function validateEmail() {
+            <br>
+         var emailID = document.myForm.email.value;
+         <br>
+         atpos = emailID.indexOf("@");
+         <br>
+         dotpos = emailID.lastIndexOf(".");
+         <br>
+         if (atpos &lt 1 || ( dotpos - atpos &lt 2 )) {
+             <br>
+            alert("Please enter correct email ID")
+            <br>
+            document.myForm.EMail.focus() ;
+            <br>
+            return false;
+            <br>
+         }
+         return( true );
+         <br>
+      }
+      <br>
+      <h2>//if statements to check rules</h2>
+      if( document.myForm.fname.value == "" ) {
+<br>
+         alert( "Please provide your first name!" );
+         <br>
+         document.myForm.fname.focus() ;
+         <br>
+         return false;
+         <br>
+      }
+      <br>
+      if( document.myForm.lname.value == "" ) {
+          <br>
+         alert( "Please provide your last name!" );
+         <br>
+         document.myForm.lname.focus() ;
+         <br>
+         return false;
+         <br>
+      }
+   <br>
+      if( document.myForm.pnumber.value == "" ) {
+          <br>
+         alert( "Please provide your Email!" );
+         <br>
+         document.myForm.pnumber.focus() ;
+         <br>
+         return false;
+         <br>
+      }
+      <br>
+      if( document.myForm.fruits.value == "" ) {
+          <br>
+         alert( "Please provide your Email!" );
+         <br>
+         document.myForm.fruits.focus() ;
+         <br>
+         return false;
+         <br>
+      }
+      <br>
+      if( document.myForm.indent.value == "" || isNaN(document.myForm.indent.value) ) {
+          <br>
+         alert( "Please provide your Email!" );
+         <br>
+         document.myForm.indent.focus() ;
+         <br>
+         return false;
+         <br>
+      }
+      <br>
+      if( document.myForm.days.value == "" ) {
+          <br>
+         alert( "Please provide your Email!" );
+         <br>
+         document.myForm.days.focus() ;
+         <br>
+         return false;
+         <br>
+      }
+      <br>
+      if (!validateEmail()) {
+        <br>
+          return false;
+          <br>
+      }
+      <br>
+      return( true );
+      <br>
+   }
+    &lt/script&gt
+</div>
+    <br>
+&lt/head&gt
+<br>
+&ltbody&gt
+<br>
+<div style="color: blanchedalmond;">
+    &ltform  method="POST" name="myForm" onsubmit="return(validate());"&gt
+    <br>
+		&ltdiv class="container"&gt
+        <br>
+			&lth1&gtReg form&lt/h1&gt
+            <br>
+			&ltlabel for="fname"&gtFirst Name&lt/label&gt
+            <br>
+			&ltinput type="text" name="fname" required &gt
+            <br>
+			&ltlabel for="lname"&gtLast Name&lt/label&gt
+            <br>
+			&ltinput type="text" name="lname" required &gt
+            <br>
+			&ltlabel for="email"&gtemail adress&lt/label&gt
+            <br>
+			&ltinput type="email" name="email" required &gt
+            <br>
+			&ltlabel for="pnumber"&gtphone number&lt/label&gt
+            <br>
+			&ltinput type="text" name="pnumber" required &gt
+            <br>
+			&ltselect name="fruits" id="fruits"&gt
+            <br>
+				&ltoption value=""&gtFruits&lt/option&gt
+                <br>
+				&ltoption value="mangoes"&gtmangoes&lt/option&gt
+                <br>
+				&ltoption value="bananas"&gtbananas&lt/option&gt
+                <br>
+				&ltoption value="oranges"&gtoranges&lt/option&gt
+                <br>
+			&lt/select&gt
+            <br>
+			&ltlabel for="ident"&gtID&lt/label&gt
+            <br>
+			&ltinput type="text" name="indent" required &gt
+            <br>
+			&ltlabel for="days"&gtDays to spend&lt/label&gt
+            <br>
+			&ltinput type="number" name="days" required &gt
+            <br>
+			&ltinput type="submit" name="create" value="reg" required &gt
+            <br>
+		&lt/div&gt
+        <br>
+	&lt/form&gt	
+</div>
+    <br>
+&lt/body&gt
+<br>
+&lt/html&gt
+<br>
+    </code>
+</div>
+</body>
+</html>
